@@ -237,8 +237,7 @@ def new_reservation(request):
 
     return Response(status=status.HTTP_201_CREATED)
 
-class Post_pk(generics.RetrieveDestroyAPIView):
+class Post_pk(generics.RetrieveUpdateDestroyAPIView):
     permission_classes = [IsAuthor0rRead0nly]
     queryset = Post.objects.all()
     serializer_class = PostSerialiser
-    
