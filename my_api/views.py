@@ -198,7 +198,7 @@ class viewsets_guest(viewsets.ModelViewSet):
 class Viewsets_Movie(viewsets.ModelViewSet):
     queryset = Movie.objects.all()
     serializer_class = MovieSerialiser
-    filter_backends = [filters.SearchFilter]
+    filter_backends = [filters.SearchFilter]        =======> filtring and searching 
     search_fields = ['movie']
 
 class Viewsets_Reservation(viewsets.ModelViewSet):
